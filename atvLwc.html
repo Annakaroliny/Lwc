@@ -1,0 +1,46 @@
+<template>
+  <lightning-card>
+ 
+    <div class="slds-m-around_medium">
+      <h1 class="slds-text-heading_large">
+        Div 1
+      </h1>
+      <p>Empresa:{empresa}</p>
+      <p>CNPJ: {cnpj}</p>
+      <p>Endereço: {endereco}</p>
+    </div>
+ 
+    <div class="slds-m-around_medium" if:true={visible}>
+      <h1 class="slds-text-heading_large">
+        Div 2
+      </h1>
+      <p>Produto:{produto}</p>
+      <p>Descrição: {descricao}</p>
+      <p>Preço: {preco}</p>
+    </div>
+ 
+    <div class="slds-m-around_medium" if:true={visible}>
+      <h1 class="slds-text-heading_large">
+        Div 3
+      </h1>
+      <p>Promoção</p>
+      <p>Oferta1: {oferta1}</p>
+      <p>Oferta2: {oferta2}</p>
+    </div>
+ 
+    <lightning-button variant="brand" label="Esconde Div" title="Alterar Visible" onclick={trocarDiv}
+      class="slds-m-left_x-small"></lightning-button>
+ 
+    <div class="slds-m-around_medium" onclick={trocarImagem}>
+      <h1 class="slds-text-heading_large">
+        Quem é esse pokemon?
+      </h1>
+      <p><img src={imgSrc}></p>
+ 
+    </div>
+ 
+ 
+ 
+  </lightning-card>
+ 
+</template>

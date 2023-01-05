@@ -1,0 +1,38 @@
+import { LightningElement } from "lwc";
+ 
+export default class App extends LightningElement {
+  title = "Welcome to Lightning Web Components!";
+ 
+  // criar variaveis de atributos
+  empresa = ' Pet Show';
+  cnpj = ' 98.875.654/0001-64';
+  endereco = ' Rua das Alfenas N° 15';
+ 
+  produto = ' Óleo de  Rosa Mosqueta';
+  descricao = ' Óleo hidratante facial e corporal extraído da semente da Rosa Mosqueta';
+  preco = ' R$ 63,99';
+ 
+  oferta1 = 'Óleo de  Rosa Mosqueta por R$ 57,99';
+  oferta2 = 'Extrato de  Rosa Mosqueta por R$ 23,99';
+ 
+ 
+    visible = true;
+        trocarDiv(){
+          this.visible = !this.visible;
+        }
+   
+    pok1 = 'https://img.playbuzz.com/image/upload/ar_1.5,c_pad,f_jpg,b_auto/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/cdn/5dd1da62-7fad-4065-ac16-928d743a2176/7af3b478-4cfa-4fce-8c24-af07c24c38c5.jpg';
+    pok2 = 'https://img.playbuzz.com/image/upload/ar_1.5,c_pad,f_jpg,b_auto/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/cdn/5dd1da62-7fad-4065-ac16-928d743a2176/98a48255-bedb-46d7-8f6e-a54229d3c75d.jpg';
+    imgSrc = this.pok1;
+   
+   
+    trocarImagem(){
+      if(this.imgSrc == this.pok1){
+      this.imgSrc = this.pok2;
+      }else{
+        this.imgSrc = this.pok1;
+      }
+ 
+ 
+    }
+}
